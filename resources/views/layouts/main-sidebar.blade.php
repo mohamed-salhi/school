@@ -57,7 +57,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="sections-menu" class="collapse" data-parent="#sidebarnav">
-{{--                            <li><a href="{{route('Sections.index')}}">{{trans('main_trans.List_sections')}}</a></li>--}}
+                            <li><a href="{{route('Sections.index')}}">{{trans('main_tran.List_sections')}}</a></li>
                         </ul>
                     </li>
 
@@ -71,8 +71,12 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="students-menu" class="collapse" data-parent="#sidebarnav">
-{{--                            <li> <a href="{{route('Students.create')}}">{{trans('main_trans.add_student')}}</a> </li>--}}
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+                            <li> <a href="{{route('Students.create')}}">اضافة طالب</a> </li>
+                            <li> <a href="{{route('Students.index')}}">قائمة الطلاب</a> </li>
+                            <li> <a href="{{route('promotion.index')}}"> الترقية الطالب </a> </li>
+                            <li> <a href="{{route('promotion.create')}}">ادارة الترقية  </a> </li>
+
+
                         </ul>
                     </li>
 
@@ -87,7 +91,7 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
-{{--                            <li> <a href="{{route('Teachers.index')}}">{{trans('main_trans.List_Teachers')}}</a> </li>--}}
+                            <li> <a href="{{route('Teachers.index')}}">قائمة المعلمين</a> </li>
                         </ul>
                     </li>
 
@@ -96,32 +100,41 @@
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Parents-menu">
                             <div class="pull-left"><i class="fas fa-user-tie"></i><span
-                                    class="right-nav-text">{{trans('main_trans.Parents')}}</span></div>
+                                    class="right-nav-text">{{trans('main_tran.Parents')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
                         <ul id="Parents-menu" class="collapse" data-parent="#sidebarnav">
-{{--                            <li> <a href="{{url('add_parent')}}">{{trans('main_trans.List_Parents')}}</a> </li>--}}
+                            <li> <a href="#">{{trans('main_tran.List_Parents')}}</a> </li>
+                            <li> <a href="{{url('add_parent')}}">{{trans('main_tran.Add_Parent')}}</a> </li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication">
-                            <div class="pull-left"><i class="ti-id-badge"></i><span
-                                    class="right-nav-text">Authentication</span></div>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Accounts-menu">
+                            <div class="pull-left"><i class="fas fa-money-bill-wave-alt"></i><span
+                                    class="right-nav-text">{{trans('main_tran.Accounts')}}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="authentication" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="login.html">login</a> </li>
-                            <li> <a href="register.html">register</a> </li>
-                            <li> <a href="lockscreen.html">Lock screen</a> </li>
+                        <ul id="Accounts-menu" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="calendar.html">Events Calendar </a> </li>
+                            <li> <a href="calendar-list.html">List Calendar</a> </li>
                         </ul>
                     </li>
-                    <!-- menu item maps-->
+
+                    <!-- Attendance-->
                     <li>
-                        <a href="maps.html"><i class="ti-location-pin"></i><span class="right-nav-text">maps</span>
-                            <span class="badge badge-pill badge-success float-right mt-1">06</span></a>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Attendance-icon">
+                            <div class="pull-left"><i class="fas fa-calendar-alt"></i><span class="right-nav-text">{{trans('main_trans.Attendance')}}</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Attendance-icon" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="fontawesome-icon.html">font Awesome</a> </li>
+                            <li> <a href="themify-icons.html">Themify icons</a> </li>
+                            <li> <a href="weather-icon.html">Weather icons</a> </li>
+                        </ul>
                     </li>
                     <!-- menu item timeline-->
                     <li>

@@ -47,18 +47,18 @@ class GradeController extends Controller
         try {
             $validated = $request->validated();
             Grade::create([
-                'Name'=>['en' => $request->Name_en, 'ar' => $request->Name],
-                'Note'=>$request->Notes,
+                'Name' => ['en' => $request->Name_en, 'ar' => $request->Name],
+                'Note' => $request->Notes,
             ]);
             toastr()->success(trans('messages.success'));
             return redirect()->route('Grades.index');
 
-        }catch (\Exception $e){
-            return redirect()->route('Grades.index')->withErrors(['error'=>$e->getMessage()]);
+        } catch (\Exception $e) {
+            return redirect()->route('Grades.index')->withErrors(['error' => $e->getMessage()]);
+
+
         }
-
     }
-
     /**
      * Display the specified resource.
      *

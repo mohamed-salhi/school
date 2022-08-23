@@ -17,4 +17,7 @@ class Grade extends Model
     public function ClassRoom(){
        return $this->hasMany(ClassRoom::class,);
     }
+    public function Sections(){
+        return $this->hasMany(Section::class,'Grade_id');
+    }
 }

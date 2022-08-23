@@ -7,6 +7,7 @@ use App\Http\Requests\ClassRoomRequest;
 use App\Http\Requests\StoreRequest;
 use App\Models\ClassRoom;
 use App\Models\Grade;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class ClassRoomController extends Controller
@@ -20,6 +21,7 @@ class ClassRoomController extends Controller
     {
         $Grades=Grade::all();
         $My_Classes=ClassRoom::all();
+
         return view('ClassRoom.index',compact('Grades','My_Classes'));
     }
 
@@ -146,6 +148,9 @@ class ClassRoomController extends Controller
               return redirect()->route('Classrooms.index');
     }
     public function Filter(Request $request){
+      if(request()->sarech==null){
+          return redirect()->route('Classrooms.index');
+      }
         $Grades=Grade::all();
         $My_Classes = ClassRoom::whereIn('grade_id', request()->sarech )->get();
         return view('ClassRoom.index',compact('Grades','My_Classes'));
